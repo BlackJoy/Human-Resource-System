@@ -1,0 +1,9 @@
+a.mm_a:link,a.mm_a:hover,a.mm_a:visited { text-decoration: none; color:#FFF;}
+a.mm_a1:link,a.mm_a1:hover,a.mm_a1:visited { text-decoration: none; color:#000;}
+.mainMenu { width:152px; line-height:22px; height: 22px; background: #d5e2f2 url("../images/mainmenubg.gif") no-repeat; margin:1px;}
+#chooseMenu-dl { height: 22px; line-height: 22px; width: 140px; overflow: hidden;}
+#chooseMenu-dl dt { width: 139px; height:22px; line-height:22px; padding-left:10px; color:#FFF;}
+#chooseMenu-dl dd { width: 139px; padding-left:2px;}
+#chooseMenu-dl dd ul { border: 2px solid #2972a6; border-top:0px; padding-bottom:30px; background:#FFF; width:143px; overflow: hidden;}
+#chooseMenu-dl dd ul li { background:rgb(191, 219, 255); padding-left:5px; width: 146px; border-top: 1px #FFF solid;  }
+.subMenu { width:142px; line-height:22px; height: 22px; background: #d5e2f2 url("../images/submenubg.gif") no-repeat; margin:1px; padding-left:10px; cursor: pointer;}

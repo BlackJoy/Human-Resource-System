@@ -1,0 +1,28 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<!DOCTYPE hibernate-mapping PUBLIC
+          "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+          "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+          
+<hibernate-mapping package="com.sys.hr.train">
+	<class name="Train" table="TBL_EMP_TRAIN">
+		<id name="id" column="id">
+			<generator class="uuid" />
+		</id>
+		<property name="trainCode" column="trainCode" />
+		<property name="trainType" column="trainType" />
+		<property name="trainSubject" column="trainSubject" />
+		<property name="trainObject" column="trainObject" />
+		<property name="orgFullName" column="orgFullName" />
+		<property name="trainStart" column="trainStart" />
+		<property name="trainEnd" column="trainEnd" />
+		<property name="trainPrice" column="trainPrice" />
+		<property name="trainManner" column="trainManner" />
+		<property name="trainRemarks" column="trainRemarks" />
+		<property name="trainStatus" column="trainStatus" />
+		<property name="applicantName" column="applicantName" />
+		<property name="applicantCode" column="applicantCode" />
+		<property name="trainDetail" column="trainDetail" />
+		<property name="orgId" column="orgId" />
+		<property name="orgCode" column="OrgCode" />
+	</class>
+</hibernate-mapping>

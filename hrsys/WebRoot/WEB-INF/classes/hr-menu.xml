@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<menus>
+	<menu id="1" name="人力资源管理" desc="人力资源管理" action="leftMenu_getLeftMenu.action"></menu>
+	<menuItem id="1.1" parentId="1" name="组织岗位管理" desc="人力资源管理-组织岗位管理"></menuItem>
+	<menuItem id="1.1.1" parentId="1.1" name="组织信息" desc="人力资源-组织岗位管理-组织信息" action="org_list.action"></menuItem>
+	<menuItem id="1.1.2" parentId="1.1" name="岗位信息" desc="人力资源-组织岗位管理-岗位信息" action="post_main.action"></menuItem>
+	<!-- 
+	<menuItem id="1.1.3" parentId="1.1" name="组织划转" desc="人力资源-组织岗位管理-组织划转" action="org_listByZtree.action"></menuItem>
+	 -->
+	<menuItem id="1.1.4" parentId="1.1" name="组织合并" desc="人力资源-组织岗位管理-组织合并" action="org_list.action"></menuItem>
+	<menuItem id="1.2" parentId="1" name="招聘管理" desc="人力资源管理-招聘管理"></menuItem>
+	<menuItem id="1.2.1" parentId="1.2" name="应聘信息管理" desc="人力资源-招聘管理-应聘信息管理" action="employ_yingpin.action"></menuItem>
+	<menuItem id="1.2.2" parentId="1.2" name="录用考核管理" desc="人力资源-招聘管理-录用考核管理" action="employ_luyong.action"></menuItem>
+	<menuItem id="1.2.3" parentId="1.2" name="入职管理" desc="人力资源-招聘管理-入职管理" action="employ_ruzhi.action"></menuItem>
+	<menuItem id="1.2.4" parentId="1.2" name="招聘计划书发布" desc="人力资源-招聘管理-招聘计划书发布" action="employPlan_employPlan"></menuItem>
+	<menuItem id="1.2.5" parentId="1.2" name="招聘计划书管理" desc="人力资源-招聘管理-招聘计划书管理" action="employPlan_planMang"></menuItem>
+
+	<!-- 用功管理start -->
+	<menuItem id="1.5" parentId="1" name="用功管理" desc="人力资源管理-用功管理"></menuItem>
+	<menuItem id="1.5.1" parentId="1.5" name="借调管理" desc="人力资源-用功管理-借调管理" ></menuItem>
+	<menuItem id="1.5.1.1" parentId="1.5.1" name="借调申请" desc="人力资源-用功管理-借调管理-借调申请" action="yonggong_shenQing.action"></menuItem>
+	<menuItem id="1.5.1.2" parentId="1.5.1" name="借调查询" desc="人力资源-用功管理-借调管理-借调查询" action="yonggong_chaXun.action"></menuItem>
+	
+	<!-- 用功管理end -->
+	<!-- 薪资管理start -->
+	<menuItem id="1.4" parentId="1" name="薪资管理" desc="人力资源管理-薪资管理"></menuItem>
+	<menuItem id="1.4.1" parentId="1.4" name="帐套管理" desc="人力资源-薪资管理-帐套管理" action="zhangtao_main.action"></menuItem>
+	<menuItem id="1.4.2" parentId="1.4" name="工资项管理" desc="人力资源-薪资管理-工资项管理" action="wageItem_list.action"></menuItem>
+	<menuItem id="1.4.3" parentId="1.4" name="员工工资档案管理及核算" desc="人力资源-薪资管理-员工工资管理" action="empWage_main.action"></menuItem>
+	<menuItem id="1.4.4" parentId="1.4" name="员工月度工资管理" desc="人力资源-薪资管理-员工月度工资管理" action="allEmpWage_list.action"></menuItem>
+	<!-- 薪资管理end -->
+	
+	<!-- 
+	<menuItem id="1.6" parentId="1" name="社保管理" desc="人力资源管理-社保管理"></menuItem>
+	<menuItem id="1.6.1" parentId="1.6" name="缴费比例" desc="人力资源-社保管理-缴费比例" action="contribRate_main.action"></menuItem>
+	<menuItem id="1.6.2" parentId="1.6" name="社保账号" desc="人力资源-社保管理-社保账号" action="ssInfo_main.action"></menuItem>
+	<menuItem id="1.6.3" parentId="1.6" name="社保基数" desc="人力资源-社保管理-社保基数" action="socSecBase_main.action"></menuItem>
+	社保 start-->
+	<!-- 社保 end-->
+	<!-- 考勤管理 -->
+	<menuItem id="1.7" parentId="1" name="考勤管理" desc="人力资源管理-考勤管理"></menuItem>
+	<menuItem id="1.7.1" parentId="1.7" name="日常考勤" desc="人力资源管理-考勤管理-日常考勤" action="kaoqin_main.action"></menuItem>
+	<menuItem id="1.7.2" parentId="1.7" name="月度考勤汇总" desc="人力资源管理-考勤管理-月度考勤汇总" action="kaoqinmonth_main.action"></menuItem>
+	<menuItem id="1.7.3" parentId="1.7" name="年度度考勤汇总" desc="人力资源管理-考勤管理-年度考勤汇总" action="kaoqinyear_main.action"></menuItem>
+	<!-- 考勤end -->	
+	<!-- 培训管理 start-->
+	<menuItem id="1.10" parentId="1" name="培训管理" desc="人力资源管理-培训管理" ></menuItem>
+	<menuItem id="1.10.1" parentId="1.10" name="培训申请管理" desc="人力资源管理-培训管理-培训申请管理" action="train_applyManage.action"></menuItem>
+	<menuItem id="1.10.2" parentId="1.10" name="培训计划管理" desc="人力资源管理-培训管理-培训计划管理" action="trainPlain_approveManage.action"></menuItem>
+    <menuItem id="1.10.3" parentId="1.10" name="培训效果管理" desc="人力资源管理-培训管理-培训效果管理" action="effectAction_effectList"></menuItem>
+    <menuItem id="1.10.4" parentId="1.10" name="个人培训评价" desc="人力资源管理-培训管理-个人培训评价" action="effectAction_toIndividualEnval.action"></menuItem>
+	<!-- 培训管理 end-->
+	<menu id="2" name="系统管理" desc="系统管理" action="leftMenu_getLeftMenu.action"></menu>
+	<menuItem id="2.1" parentId="2" name="账号管理" desc="系统管理-账号管理"></menuItem>
+	<menuItem id="2.1.1" parentId="2.1" name="系统账号" desc="系统管理-账号管理-系统账号" action="account_main.action"></menuItem>
+	<menuItem id="2.2" parentId="2" name="权限管理" desc="系统管理-权限管理"></menuItem>
+	<menuItem id="2.2.1" parentId="2.2" name="角色管理" desc="系统管理-权限管理-角色管理" action="role_list.action"></menuItem>
+	<menuItem id="2.3" parentId="2" name="系统设置" desc="系统管理-系统设置"></menuItem>
+	<menuItem id="2.3.1" parentId="2.3" name="审批流程设置" desc="系统管理-系统设置-审批流程设置" action="approve_list.action"></menuItem>
+	<menuItem id="2.3.2" parentId="2.3" name="数据字典设置" desc="系统管理-系统设置-数据字典设置" action="dic_list.action"></menuItem>
+</menus>

@@ -1,0 +1,22 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<!DOCTYPE hibernate-mapping PUBLIC
+          "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+          "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+          
+<hibernate-mapping package="com.sys.hr.kaoqin2">
+	<class name="Kaoqinmonth" table="TBL_KAOQIN_MONTH">
+		<id name="id" column="id">
+			<generator class="uuid" />
+		</id>
+		<property name="employeeName" column="EMPLOYEENAME" />
+		<property name="orgid" column="ORGID" />
+		<property name="kaoqinTime" column="KAOQINTIME" />
+		<property name="postname" column="POSTNAME" />
+		<property name="stateQq" column="STATE_QQ" />
+		<property name="stateCq" column="STATE_CQ" />
+		<property name="stateQj" column="STATE_QJ" />
+		<property name="stateCd" column="STATE_CD" />
+		<property name="isaddJb" column="ISADD_JB" />
+
+	</class>
+</hibernate-mapping>

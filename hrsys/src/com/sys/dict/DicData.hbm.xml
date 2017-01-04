@@ -1,0 +1,17 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<!DOCTYPE hibernate-mapping PUBLIC
+          "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+          "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+          
+<hibernate-mapping package="com.sys.dict">
+	<class name="DicData" table="TBL_DICDATA">
+		<id name="id" column="id">
+			<generator class="uuid" />
+		</id>
+		
+		<property name="dicDataCode" column="DICDATA_CODE" />
+		<property name="dicTypeId" column="DICTYPE_ID" />
+		<property name="dicDataName" column="DICDATA_NAME" />
+		<property name="dicDataComment" column="DICDATA_COMMENT" />
+	</class>
+</hibernate-mapping>

@@ -1,0 +1,14 @@
+eclipse.preferences.version=1
+encoding//WebRoot/js/DatePicker.js=UTF-8
+encoding//WebRoot/js/dtree.js=UTF-8
+encoding//WebRoot/js/train/jquery.date_input.zh_CN.js=UTF-8
+encoding//WebRoot/page/hr=UTF-8
+encoding//WebRoot/page/hr/train=UTF-8
+encoding//src/com/sys/approve/action/ApproveAction.java=UTF-8
+encoding//src/com/sys/approve/biz/impl/ApproveBIZImpl.java=UTF-8
+encoding//src/com/sys/common/Page.java=GBK
+encoding//src/com/sys/common/biz/BaseBIZImpl.java=UTF-8
+encoding//src/com/sys/common/biz/IBaseBIZ.java=GBK
+encoding//src/com/sys/common/dao/IBaseDAO.java=GBK
+encoding//src/com/sys/hr/train=UTF-8
+encoding//src/com/sys/tag/OrgTreeTagBox.java=UTF-8

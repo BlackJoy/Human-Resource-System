@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:aop="http://www.springframework.org/schema/aop"
+	xmlns:tx="http://www.springframework.org/schema/tx"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-2.0.xsd 
+	http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx-2.0.xsd 
+	http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop-2.0.xsd">
+
+	<bean id="absDao" abstract="true">
+		<property name="sessionFactory" ref="sessionFactory" />
+	</bean>
+
+	<bean id="authorityDao" class="com.sys.authority.dao.impl.AuthorityDAOImpl" parent="absDao" />
+	
+	<bean id="roleAuthorityDao" class="com.sys.role.dao.impl.RoleAuthorityDAOImpl" parent="absDao" />
+	
+	<bean id="userDao" class="com.sys.login.dao.impl.UserDAOImpl" parent="absDao" />
+	
+	<bean id="reDao" class="com.sys.role.dao.impl.RoleEmployeeDAOImpl" parent="absDao" />
+	
+	<bean id="roleDao" class="com.sys.role.dao.impl.IRoleDAOImpl" parent="absDao" />
+	
+	<bean id="empDao" class="com.sys.hr.employee.dao.impl.EmployeeDAOImpl" parent="absDao" />
+	
+	<bean id="orgDao" class="com.sys.hr.org.dao.impl.OrgDAOImpl" parent="absDao" />
+	
+	<bean id="commonDao" class="com.sys.common.dao.BaseDAO" parent="absDao" />
+	
+	<bean id="accountDao" class="com.sys.account.dao.impl.AccountDAOImpl" parent="absDao" />
+	
+	<bean id="approveDao" class="com.sys.approve.dao.impl.ApproveDAOImpl" parent="absDao" />
+	
+	<bean id="dicDao" class="com.sys.dict.dao.impl.DicDAOImpl" parent="absDao" />
+	
+	<bean id="employDao" class="com.sys.hr.employ.dao.impl.EmployDAOImpl" parent="absDao" />
+	<!-- 招聘计划书 start -->
+	<bean id="planDao" class="com.sys.hr.employplan.dao.impl.EmployPlanDaoImpl" parent="absDao" />
+	<!--招聘计划书  end   -->
+</beans>

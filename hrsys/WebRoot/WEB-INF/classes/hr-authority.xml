@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<authorities>
+	<!-- 人力资源管理  -->
+	<authority id="1" menuId="1" name="人力资源管理" desc="人力资源管理"></authority>
+	<!-- 组织岗位管理 -->
+	<authority id="1.1" parentId="1" menuId="1.1" name="组织岗位管理" desc="人力资源管理-组织岗位管理"></authority>
+	<authority id="1.1.1" parentId="1.1" menuId="1.1.1" name="组织信息" desc="人力资源-组织岗位管理-组织信息"></authority>
+	<authority id="1.1.1.1" parentId="1.1.1" name="增加子组织" desc="人力资源-组织岗位管理-组织信息-增加子组织"></authority>
+	<authority id="1.1.1.2" parentId="1.1.1" name="修改" desc="人力资源-组织岗位管理-组织信息-修改"></authority>
+	<authority id="1.1.1.3" parentId="1.1.1" name="删除" desc="人力资源-组织岗位管理-组织信息-删除"></authority>
+	<authority id="1.1.2" parentId="1.1" menuId="1.1.2" name="岗位信息" desc="人力资源-组织岗位管理-岗位信息"></authority>
+	<authority id="1.1.2.1" parentId="1.1.2" name="增加岗位" desc="人力资源-组织岗位管理-岗位信息-增加岗位"></authority>
+	<authority id="1.1.2.2" parentId="1.1.2" name="修改" desc="人力资源-组织岗位管理-岗位信息-修改"></authority>
+	<authority id="1.1.2.3" parentId="1.1.2" name="删除" desc="人力资源-组织岗位管理-岗位信息-删除"></authority>
+	<authority id="1.1.3" parentId="1.1" menuId="1.1.3" name="组织划转" desc="人力资源-组织岗位管理-组织划转"></authority>
+	<authority id="1.1.3.1" parentId="1.1.3" name="划转" desc="人力资源-组织岗位管理-组织划转-划转"></authority>
+	<authority id="1.1.4" parentId="1.1" menuId="1.1.4" name="组织合并" desc="人力资源-组织岗位管理-组织合并"></authority>
+	<authority id="1.2" parentId="1" menuId="1.2" name="招聘管理" desc="人力资源管理-招聘管理"></authority>
+	<authority id="1.2.1" parentId="1.2" menuId="1.2.1" name="应聘信息管理" desc="人力资源-招聘管理-应聘信息管理"></authority>
+	<authority id="1.2.1.1" parentId="1.2.1" name="增加" desc="人力资源-招聘管理-应聘信息管理-增加"></authority>
+	<authority id="1.2.1.2" parentId="1.2.1" name="修改" desc="人力资源-招聘管理-应聘信息管理-修改"></authority>
+	<authority id="1.2.1.3" parentId="1.2.1" name="删除" desc="人力资源-招聘管理-应聘信息管理-删除"></authority>
+	<authority id="1.2.1.4" parentId="1.2.1" name="转入录用考核" desc="人力资源-招聘管理-应聘信息管理-转入录用考核"></authority>
+	<authority id="1.2.2" parentId="1.2" menuId="1.2.2" name="录用考核管理" desc="人力资源-招聘管理-录用考核管理"></authority>
+	<authority id="1.2.2.1" parentId="1.2.2" name="修改" desc="人力资源-招聘管理-录用考核管理-修改"></authority>
+	<!-- 
+	<authority id="1.2.2.2" parentId="1.2.2" name="删除" desc="人力资源-招聘管理-录用考核管理-删除"></authority>
+	 -->
+	<authority id="1.2.2.3" parentId="1.2.2" name="转入入职管理" desc="人力资源-招聘管理-录用考核管理-转入入职管理"></authority>
+	<authority id="1.2.2.4" parentId="1.2.2" name="转入应聘信息管理" desc="人力资源-招聘管理-录用考核管理-转入应聘信息管理"></authority>
+	<authority id="1.2.3" parentId="1.2" menuId="1.2.3" name="入职管理" desc="人力资源-招聘管理-入职管理"></authority>
+	<authority id="1.2.3.1" parentId="1.2.3" name="转入录用考核" desc="人力资源-招聘管理-入职管理-转入录用考核"></authority>
+	<authority id="1.2.3.2" parentId="1.2.3" name="发起入职流程" desc="人力资源-招聘管理-入职管理-发起入职流程"></authority>
+
+	<authority id="1.2.4" parentId="1.2" menuId="1.2.4" name="招聘计划书发布" desc="人力资源-招聘管理-招聘计划书发布"></authority>
+	<authority id="1.2.4.1" parentId="1.2.4" name="增加" desc="人力资源-招聘管理-招聘计划书发布-增加"></authority>
+	<authority id="1.2.4.2" parentId="1.2.4" name="修改" desc="人力资源-招聘管理-招聘计划书发布-修改"></authority>
+	<authority id="1.2.4.3" parentId="1.2.4" name="删除" desc="人力资源-招聘管理-招聘计划书发布-删除"></authority>
+	<authority id="1.2.4.4" parentId="1.2.4" name="递交招聘计划书审批" desc="人力资源-招聘管理-招聘计划书发布-递交招聘计划书审批"></authority>
+	<authority id="1.2.4.5" parentId="1.2.4" name="打印招聘计划书" desc="人力资源-招聘管理-招聘计划书发布-打印招聘计划书"></authority>
+	<authority id="1.2.4.6" parentId="1.2.4" name="批量增加" desc="人力资源-招聘管理-招聘计划书发布-批量增加"></authority>
+	<authority id="1.2.5" parentId="1.2" menuId="1.2.5" name="招聘计划书管理" desc="人力资源-招聘管理-招聘计划书管理"></authority>
+	<authority id="1.2.5.1" parentId="1.2.5" name="发起审批流程" desc="人力资源-招聘管理-递交招聘计划书管理-发起审批流程"></authority>
+	<authority id="1.2.5.2" parentId="1.2.5" name="转到招聘计划书发布" desc="人力资源-招聘管理-递交招聘计划书管理-转到招聘计划书发布"></authority>
+<!-- 员工管理start -->
+    <authority id="1.3" parentId="1" menuId="1.3" name="员工管理" desc="人力资源管理-员工管理"></authority>
+	<authority id="1.3.1" parentId="1.3" menuId="1.3.1" name="请假管理" desc="人力资源-员工管理-请假管理"></authority>
+	<authority id="1.3.1.1" parentId="1.3.1" name="增加" desc="人力资源-员工管理-请假管理-增加"></authority>
+	<authority id="1.3.1.2" parentId="1.3.1" name="修改" desc="人力资源-员工管理-请假管理-修改"></authority>
+	<authority id="1.3.1.3" parentId="1.3.1" name="删除" desc="人力资源-员工管理-请假管理-删除"></authority>
+	<authority id="1.3.1.4" parentId="1.3.1" name="发起请假流程" desc="人力资源-员工管理-请假管理-发起请假流程"></authority>
+
+    <authority id="1.3.2" parentId="1.3" menuId="1.3.2" name="人员信息管理" desc="人力资源-员工管理-人员信息管理"></authority>
+	<authority id="1.3.2.1" parentId="1.3.2" name="增加" desc="人力资源-员工管理-人员信息管理-增加"></authority>
+	<authority id="1.3.2.2" parentId="1.3.2" name="修改" desc="人力资源-员工管理-人员信息管理-修改"></authority>
+	<authority id="1.3.2.3" parentId="1.3.2" name="删除" desc="人力资源-员工管理-人员信息管理-删除"></authority>
+	<authority id="1.3.2.4" parentId="1.3.2" name="详情" desc="人力资源-员工管理-人员信息管理-详情"></authority>
+	<authority id="1.3.2.5" parentId="1.3.2" name="调动" desc="人力资源-员工管理-人员信息管理-调动"></authority>
+	<authority id="1.3.2.6" parentId="1.3.2" name="确定" desc="人力资源-员工管理-人员信息管理-确定"></authority>
+<!-- 员工管理end -->
+
+<!-- 薪资管理start -->
+	 <authority id="1.4" parentId="1" menuId="1.4" name="薪资管理" desc="人力资源管理-薪资管理"></authority>
+	<authority id="1.4.1" parentId="1.4" menuId="1.4.1" name="帐套管理" desc="人力资源-薪资管理-帐套管理"></authority>
+	<authority id="1.4.1.1" parentId="1.4.1" name="增加" desc="人力资源-薪资管理-帐套管理-增加"></authority>
+	<authority id="1.4.1.2" parentId="1.4.1" name="修改" desc="人力资源-薪资管理-帐套管理-修改"></authority>
+	<authority id="1.4.1.3" parentId="1.4.1" name="删除" desc="人力资源-薪资管理-帐套管理-删除"></authority>
+	<authority id="1.4.2" parentId="1.4" menuId="1.4.2" name="工资项管理" desc="人力资源-薪资管理-工资项管理"></authority>
+	<authority id="1.4.2.1" parentId="1.4.2" name="增加" desc="人力资源-薪资管理-工资项管理-增加"></authority>
+	<authority id="1.4.2.2" parentId="1.4.2" name="删除" desc="人力资源-薪资管理-工资项管理-删除"></authority>
+	<authority id="1.4.2.3" parentId="1.4.2" name="添加到帐套" desc="人力资源-薪资管理-工资项管理-添加到帐套"></authority>
+	<authority id="1.4.2.4" parentId="1.4.2" name="更新" desc="人力资源-薪资管理-工资项管理-更新"></authority>
+	<authority id="1.4.3" parentId="1.4" menuId="1.4.3" name="员工工资管理" desc="人力资源-薪资管理-员工工资管理"></authority>
+	<authority id="1.4.3.1" parentId="1.4.3" name="录入" desc="人力资源-薪资管理-工资项管理-录入"></authority>
+	<authority id="1.4.3.2" parentId="1.4.3" name="薪资计算" desc="人力资源-薪资管理-工资项管理-薪资计算"></authority>
+	<authority id="1.4.4" parentId="1.4" menuId="1.4.4" name="员工月度工资管理" desc="人力资源-薪资管理-员工月度工资管理"></authority>
+	<authority id="1.4.4.1" parentId="1.4.4" name="查看" desc="人力资源-薪资管理-员工月度工资管理-工资项对应管理"></authority>
+	<!-- 薪资管理end -->
+	<!-- 社保start -->
+	 <authority id="1.6" parentId="1" menuId="1.6" name="社保管理" desc="人力资源管理-社保管理"></authority>
+	 <authority id="1.6.1" parentId="1.6" menuId="1.6.1" name="缴费比例" desc="人力资源管理-社保管理-缴费比例"></authority>
+	 <authority id="1.6.1.1" parentId="1.6.1" name="增加" desc="人力资源管理-社保管理-缴费比例-增加"></authority>
+	 <authority id="1.6.1.2" parentId="1.6.1" name="修改" desc="人力资源管理-社保管理-缴费比例-修改"></authority>
+	 <authority id="1.6.1.3" parentId="1.6.1" name="删除" desc="人力资源管理-社保管理-缴费比例-删除"></authority>
+	 
+	 <authority id="1.6.2" parentId="1.6" menuId="1.6.2" name="社保账号" desc="人力资源管理-社保管理-社保账号"></authority>
+	 <authority id="1.6.3" parentId="1.6" menuId="1.6.3" name="社保基数" desc="人力资源管理-社保管理-社保基数"></authority>
+	 
+	<!-- 社保end -->
+<!-- 用功管理start -->
+  <authority id="1.5" parentId="1" menuId="1.5" name="用功管理" desc="人力资源管理-用功管理"></authority>
+  <authority id="1.5.1" parentId="1.5" menuId="1.5.1" name="借调管理" desc="人力资源-用功管理-借调管理"></authority>
+  <authority id="1.5.1.1" parentId="1.5.1" menuId="1.5.1.1" name="借调申请" desc="人力资源-用功管理-借调管理-借调申请"></authority>
+  <authority id="1.5.1.2" parentId="1.5.1" menuId="1.5.1.2" name="借调查询" desc="人力资源-用功管理-借调管理-借调查询"></authority>
+<!-- 用功管理end -->
+
+	<!-- 考勤管理 -->
+	<authority id="1.7" parentId="1" menuId="1.7" name="考勤管理" desc="人力资源管理-考勤管理"></authority>
+	<authority id="1.7.1" parentId="1.7" menuId="1.7.1" name="日常考勤" desc="人力资源-考勤管理-日常考勤"></authority>
+	<authority id="1.7.1.1" parentId="1.7.1" name="正常出勤" desc="人力资源-考勤管理-日常考勤-正常出勤"></authority>
+	<authority id="1.7.1.2" parentId="1.7.1" name="请假" desc="人力资源-考勤管理-日常考勤-请假"></authority>
+	<authority id="1.7.1.3" parentId="1.7.1" name="迟到" desc="人力资源-考勤管理-日常考勤-迟到"></authority>
+	<authority id="1.7.1.4" parentId="1.7.1" name="缺勤" desc="人力资源-考勤管理-日常考勤-缺勤"></authority>
+	<authority id="1.7.1.5" parentId="1.7.1" name="加班" desc="人力资源-考勤管理-日常考勤-加班"></authority>
+	<authority id="1.7.2" parentId="1.7" menuId="1.7.2" name="月度考勤汇总" desc="人力资源-考勤管理-月度考勤汇总"></authority>
+	<authority id="1.7.2.1" parentId="1.7.2" name="人员月度汇总" desc="人力资源-考勤管理-考勤汇总-人员月度汇总"></authority>
+	<authority id="1.7.2.2" parentId="1.7.2" name="部门月度汇总" desc="人力资源-考勤管理-考勤汇总-部门月度汇总"></authority>
+	<authority id="1.7.2.3" parentId="1.7.2" name="查看月度汇总记录" desc="人力资源-考勤管理-考勤汇总-部门月度汇总"></authority>
+	<authority id="1.7.3" parentId="1.7" menuId="1.7.3" name="年度考勤汇总" desc="人力资源-考勤管理-月度考勤汇总"></authority>
+	<authority id="1.7.3.1" parentId="1.7.3" name="人员年度汇总" desc="人力资源-考勤管理-年度考勤汇总-人员年度考勤汇总"></authority>
+	<authority id="1.7.3.2" parentId="1.7.3" name="部门年度汇总" desc="人力资源-考勤管理-年度考勤汇总-部门年度考勤汇总"></authority>
+	<authority id="1.7.3.3" parentId="1.7.3" name="查看年度汇总记录" desc="人力资源-考勤管理-年度考勤汇总-部门年度考勤汇总"></authority>
+	<!-- 考勤end -->
+<!-- 培训管理start -->
+	<authority id="1.10" parentId="1" menuId="1.10" name="培训管理" desc="人力资源管理-培训管理"></authority>
+	<authority id="1.10.1" parentId="1.10" menuId="1.10.1" name="培训申请管理" desc="人力资源-薪资管理-培训申请管理"></authority>
+	<authority id="1.10.1.1" parentId="1.10.1" name="增加" desc="人力资源-薪资管理-培训申请管理-增加"></authority>
+	<authority id="1.10.1.2" parentId="1.10.1" name="修改" desc="人力资源-薪资管理-培训申请管理-修改"></authority>
+	<authority id="1.10.1.3" parentId="1.10.1" name="删除" desc="人力资源-薪资管理-培训申请管理-删除"></authority>
+	<authority id="1.10.1.4" parentId="1.10.1" name="转入培训审批" desc="人力资源-薪资管理-培训申请管理-转入培训审批流程"></authority>
+	<authority id="1.10.2" parentId="1.10" menuId="1.10.2" name="培训计划管理" desc="人力资源-薪资管理-培训计划管理"></authority>
+	<authority id="1.10.2.1" parentId="1.10.2" name="修改" desc="人力资源-薪资管理-培训计划管理-修改"></authority>
+	<authority id="1.10.2.2" parentId="1.10.2" name="删除" desc="人力资源-薪资管理-培训计划管理-删除"></authority>
+	<authority id="1.10.2.3" parentId="1.10.2" name="培训人员管理" desc="人力资源-薪资管理-培训计划管理-培训人员管理"></authority>
+	<authority id="1.10.3.4" parentId="1.10.2" name="实施培训" desc="人力资源-薪资管理-培训计划管理-实施培训"></authority>	
+	<authority id="1.10.3.5" parentId="1.10.2" name="培训结果分析" desc="人力资源-薪资管理-培训计划管理-培训结果分析"></authority>	
+	<authority id="1.10.3" parentId="1.10" menuId="1.10.3" name="培训效果管理" desc="人力资源-薪资管理-培训效果管理"></authority>
+	<authority id="1.10.3.1" parentId="1.10.3" name="发起培训效果评价流程" desc="人力资源-薪资管理-培训计划管理-培训效果评价"></authority>
+	<authority id="1.10.3.2" parentId="1.10.3" name="评价" desc="人力资源-薪资管理-培训计划管理-评价"></authority>	
+	<authority id="1.10.3.3" parentId="1.10.3" name="结束项目" desc="人力资源-薪资管理-培训计划管理-结束项目"></authority>	
+	<authority id="1.10.4" parentId="1.10" menuId="1.10.4" name="个人培训评价" desc="人力资源管理-培训管理-个人培训评价"></authority>s	
+<!-- 培训管理end -->
+
+	<!-- 系统管理 -->
+	<authority id="2" menuId="2" name="系统管理" desc="系统管理"></authority>
+	<!-- 账号管理 -->
+	<authority id="2.1" parentId="2" menuId="2.1" name="账号管理" desc="系统管理-账号管理"></authority>
+	<!-- 系统账号 -->
+	<authority id="2.1.1" parentId="2.1" menuId="2.1.1" name="系统账号" desc="系统管理-账号管理-系统账号"></authority>
+	<authority id="2.1.1.1" parentId="2.1.1" name="增加" desc="系统管理-账号管理-系统账号-增加"></authority>
+	<authority id="2.1.1.2" parentId="2.1.1" name="修改" desc="系统管理-账号管理-系统账号-修改"></authority>
+	<authority id="2.1.1.3" parentId="2.1.1" name="删除" desc="系统管理-账号管理-系统账号-删除"></authority>
+	<authority id="2.1.1.4" parentId="2.1.1" name="注销" desc="系统管理-账号管理-系统账号-注销"></authority>
+	<authority id="2.1.1.5" parentId="2.1.1" name="启用" desc="系统管理-账号管理-系统账号-启用"></authority>
+	<!-- 权限管理 -->
+	<authority id="2.2" parentId="2" menuId="2.2" name="权限管理" desc="系统管理-权限管理"></authority>
+	<!-- 角色管理 -->
+	<authority id="2.2.1" parentId="2.2" menuId="2.2.1" name="角色管理" desc="系统管理-权限管理-角色管理"></authority>
+	<authority id="2.2.1.1" parentId="2.2.1" name="增加" desc="系统管理-权限管理-角色管理-增加"></authority>
+	<authority id="2.2.1.2" parentId="2.2.1" name="修改" desc="系统管理-权限管理-角色管理-修改"></authority>
+	<authority id="2.2.1.3" parentId="2.2.1" name="删除" desc="系统管理-权限管理-角色管理-删除"></authority>
+	<authority id="2.2.1.4" parentId="2.2.1" name="分配人员" desc="系统管理-权限管理-角色管理-分配人员"></authority>
+	<authority id="2.2.1.5" parentId="2.2.1" name="分配权限" desc="系统管理-权限管理-角色管理-分配权限"></authority>
+	<!-- 系统设置 -->
+	<authority id="2.3" parentId="2" menuId="2.3" name="系统设置" desc="系统管理-系统设置"></authority>
+	<!-- 审批流程设置 -->
+	<authority id="2.3.1" parentId="2.3" menuId="2.3.1" name="审批流程设置" desc="系统管理-系统设置-审批流程设置"></authority>
+	<authority id="2.3.1.1" parentId="2.3.1" name="增加" desc="系统管理-系统设置-审批流程设置-增加"></authority>
+	<authority id="2.3.1.2" parentId="2.3.1" name="修改" desc="系统管理-系统设置-审批流程设置-修改"></authority>
+	<authority id="2.3.1.3" parentId="2.3.1" name="删除" desc="系统管理-系统设置-审批流程设置-删除"></authority>
+	<!-- 数据字典设置 -->
+	<authority id="2.3.2" parentId="2.3" menuId="2.3.2" name="数据字典设置" desc="系统管理-系统设置-数据字典设置"></authority>
+	<authority id="2.3.2.1" parentId="2.3.2" name="增加" desc="系统管理-系统设置-数据字典设置-增加"></authority>
+	<authority id="2.3.2.2" parentId="2.3.2" name="修改" desc="系统管理-系统设置-数据字典设置-修改"></authority>
+	<authority id="2.3.2.3" parentId="2.3.2" name="删除" desc="系统管理-系统设置-数据字典设置-删除"></authority>
+</authorities>

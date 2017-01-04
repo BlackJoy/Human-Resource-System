@@ -1,0 +1,48 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<!DOCTYPE hibernate-mapping PUBLIC
+          "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+          "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+          
+<hibernate-mapping>
+	<class name="com.sys.hr.zhangtao.ZhangTao" table="WAGE_TYPE">
+		  <id name="wageTypeId" type="java.lang.String">
+            <column name="WAGE_TYPE_ID" length="20" />
+            <generator class="uuid" />
+        </id>
+        <property name="wageTypeNo" type="java.lang.String">
+            <column name="WAGE_TYPE_NO" length="20" />
+        </property>
+        <property name="deptNo" type="java.lang.String">
+            <column name="DEPT_NO" length="20" />
+        </property>
+        <property name="deptId" type="java.lang.String">
+            <column name="DEPT_ID" length="50" />
+        </property>
+        <property name="createDat" type="java.util.Date">
+            <column name="CREATE_DAT" length="7" />
+        </property>
+        <property name="wageTypeName" type="java.lang.String">
+            <column name="WAGE_TYPE_NAME" length="200" />
+        </property>
+        <property name="note" type="java.lang.String">
+            <column name="NOTE" length="200" />
+        </property>
+        <property name="iactive" type="java.lang.Integer">
+            <column name="IACTIVE" precision="22" scale="0" />
+        </property>
+        
+        <set name="wageItemSet" table="WAGE_TYPE_RELATION" lazy="true">
+        <key column="WAGE_TYPE_ID"></key>
+        <many-to-many class="com.sys.hr.wageitem.WageItem" column="WAGE_ID"></many-to-many>
+        </set>
+        
+        <set name="empSet" inverse="true" lazy="true">
+        <key column="WAGE_TYPE_ID"></key>
+        <one-to-many class="com.sys.hr.empwage.CmpnWageInfo"></one-to-many>
+        </set>
+        
+        
+        
+        
+	</class>
+</hibernate-mapping>

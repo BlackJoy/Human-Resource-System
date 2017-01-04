@@ -1,0 +1,173 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:aop="http://www.springframework.org/schema/aop"
+	xmlns:tx="http://www.springframework.org/schema/tx"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-2.0.xsd 
+	http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx-2.0.xsd 
+	http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop-2.0.xsd">
+
+	<bean id="userAction" class="com.sys.login.action.UserAction"
+		scope="prototype">
+		<property name="userBiz" ref="userBiz" />
+		<property name="empBiz" ref="empBiz" />
+	</bean>
+
+	<bean id="roleAction" class="com.sys.role.action.RoleAction"
+		scope="prototype">
+		<property name="reBiz" ref="reBiz" />
+		<property name="roleAuthorityBiz" ref="roleAuthorityBiz" />
+		<property name="authorityBiz" ref="authorityBiz" />
+		<property name="orgBiz" ref="orgBiz" />
+		<property name="roleBiz" ref="roleBiz" />
+	</bean>
+
+	<bean id="leftMenuAction" class="com.sys.menu.action.LeftMenuAction"
+		scope="prototype" />
+
+	<bean id="orgAction" class="com.sys.hr.org.action.OrgAction"
+		scope="prototype">
+		<property name="orgBiz" ref="orgBiz" />
+		<property name="commonBiz" ref="commonBiz" />
+	</bean>
+
+	<bean id="postAction" class="com.sys.hr.org.action.PostAction"
+		scope="prototype">
+		<property name="commonBiz" ref="commonBiz" />
+	</bean>
+
+	<bean id="accountAction" class="com.sys.account.action.AccountAction"
+		scope="prototype">
+		<property name="accountBiz" ref="accountBiz" />
+	</bean>
+
+	<bean id="approveAction" class="com.sys.approve.action.ApproveAction"
+		scope="prototype">
+		<property name="approveBiz" ref="approveBiz" />
+		<property name="commonBiz" ref="commonBiz"></property>
+	</bean>
+
+	<bean id="empAjaxAction" class="com.sys.hr.employee.action.EmployeeAjaxAction"
+		scope="prototype">
+		<property name="empBiz" ref="empBiz" />
+	</bean>
+
+	<bean id="dicAction" class="com.sys.dict.action.DicAction" scope="prototype">
+		<property name="dicBiz" ref="dicBiz" />
+	</bean>
+
+	<bean id="employAction" class="com.sys.hr.employ.action.EmployAction"
+		scope="prototype">
+		<property name="employBiz" ref="employBiz" />
+		<property name="orgBiz" ref="orgBiz" />
+		<property name="approveBiz" ref="approveBiz" />
+	</bean>
+	<!-- 考勤管理 -->
+		<bean id="kaoqinAction" class="com.sys.hr.kaoqin.action.KaoqinAction" scope="prototype">
+			<property name="commonBiz" ref="commonBiz" />
+		</bean>
+		<bean id="kaoqinmonthAction" class="com.sys.hr.kaoqin2.action.KaoqinmonthAction" scope="prototype">
+			<property name="commonBiz" ref="commonBiz" />
+		</bean>
+		<bean id="kaoqinyearAction" class="com.sys.hr.kaoqin2.action.KaoqinyearAction" scope="prototype">
+			<property name="commonBiz" ref="commonBiz" />
+		</bean>
+	<!-- end -->
+
+
+
+	<!-- 员工管理action start -->
+	<bean id="employeeAction" class="com.sys.hr.employee.action.EmployeeAction"
+		scope="prototype">
+		<property name="commonBiz" ref="commonBiz" />
+		<property name="empBiz" ref="empBiz" />
+	</bean>
+	<!-- 员工管理action end -->
+	
+	<!-- 社保start -->
+	<bean id="contribRateAction" class="com.sys.hr.socialSecurity.action.ContribRateAction"
+		scope="prototype">
+		<property name="commonBiz" ref="commonBiz" />
+	</bean>
+	<bean id="ssInfoAction" class="com.sys.hr.socialSecurity.action.ssInfoAction"
+		scope="prototype">
+		<property name="commonBiz" ref="commonBiz" />
+	</bean>	
+	<bean id="socSecBaseAction" class="com.sys.hr.socialSecurity.action.SocSecBaseAction"
+		scope="prototype">
+		<property name="commonBiz" ref="commonBiz" />
+	</bean>	
+	<!-- 社保end -->
+
+    <!-- 用功管理  start -->
+     <bean id="yonggongAction" class="com.sys.hr.yonggong.action.YonggongAction"
+		scope="prototype">
+        <property name="commonBiz" ref="commonBiz" /> 
+        <property name="empBiz" ref="empBiz" />
+     </bean>   
+    <!-- 用功管理  end -->
+ 
+<!-- ***********************薪资管理start**************************************** -->
+	<!-- 帐套管理action start -->
+	<bean id="zhangtaoAction" class="com.sys.hr.zhangtao.action.ZhangTaoAction"
+		scope="prototype">
+		<property name="commonBiz" ref="commonBiz"></property>
+	</bean>
+	<!-- 帐套管理action end -->
+	
+	
+	<!-- 工资项管理action start -->
+	<bean id="wageItemAction" class="com.sys.hr.wageitem.action.WageItemAction"
+		scope="prototype">
+		<property name="commonBiz" ref="commonBiz"></property>
+	</bean>
+	<!-- 工资项管理action end -->
+	
+	
+	<!-- 员工工资管理start -->
+	<bean id="empWageAction" class="com.sys.hr.empwage.action.EmpWageAction"
+		scope="prototype">
+		<property name="commonBiz" ref="commonBiz"></property>
+	</bean>
+	
+	<!-- 员工工资管理end -->
+	<!-- 员工月度工资管理start -->
+	<bean id="allEmpWageAction" class="com.sys.hr.allempwage.action.AllEmpWageAction"
+		scope="prototype">
+		<property name="commonBiz" ref="commonBiz"></property>
+	</bean>
+	
+	<!-- 员工月度工资管理end -->
+
+	<!-- excel导入start -->
+	<bean id="excelImportAction" class="com.sys.hr.empwage.action.ExcelImportAction"
+		scope="prototype">
+		<property name="commonBiz" ref="commonBiz"></property>
+	</bean>
+	<!-- excel导入end -->
+	
+	
+<!-- ***********************薪资管理end**************************************** -->
+<!--  招聘计划书 start -->
+<bean id="employPlanAction" class="com.sys.hr.employplan.action.EmployPlanAction" scope="prototype">
+		<property name="commonBiz" ref="commonBiz"></property>
+		<property name="planBiz" ref="planBiz"></property>
+		<property name="approveBiz" ref="approveBiz"></property>
+	</bean>
+
+<!-- 招聘计划书 end -->
+
+	<!-- 培训管理 action start-->
+	<bean id="trainAction" class="com.sys.hr.train.action.TrainAction" scope="prototype">
+		<property name="commonBiz" ref="commonBiz"/>
+		<property name="approveBiz" ref="approveBiz"></property>
+	</bean>	
+	<bean id="trainPlainAction" class="com.sys.hr.train.action.TrainPlainAction" scope="prototype">
+		<property name="commonBiz" ref="commonBiz"/>
+		<property name="roleBiz" ref="roleBiz"></property>
+		<property name="orgBiz" ref="orgBiz"></property>
+	</bean>
+	<bean id="effectAction" class="com.sys.hr.train.action.EffectAction"  scope="prototype">
+		<property name="commonBiz" ref="commonBiz"/>
+	</bean>
+	<!-- 培训管理 action end-->
+</beans>

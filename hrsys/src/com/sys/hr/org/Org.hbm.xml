@@ -1,0 +1,23 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<!DOCTYPE hibernate-mapping PUBLIC
+          "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+          "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+          
+<hibernate-mapping package="com.sys.hr.org">
+	<class name="Org" table="TBL_Org">
+		<id name="id" column="id">
+			<generator class="uuid" />
+		</id>
+		<property name="orgCode" column="orgCode" />
+		<property name="orgFullName" column="orgFullName" />
+		<property name="orgShortName" column="orgShortName" />
+		<property name="orgType" column="orgType" />
+		<property name="orgStatus" column="orgStatus" />
+		<property name="orgParentId" column="orgParentId" />
+		<!-- 部门和岗位一对多 -->
+		<set name="orgPosts" inverse="true"  >
+		<key column="ORGID" ></key>
+		<one-to-many class="com.sys.hr.org.Post"/>
+		</set>
+	</class>
+</hibernate-mapping>

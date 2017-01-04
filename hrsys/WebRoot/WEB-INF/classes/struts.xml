@@ -1,0 +1,326 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC
+    "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+    "http://struts.apache.org/dtds/struts-2.0.dtd">
+
+<struts>
+	<!-- <constant name="struts.ui.theme" value="simple" /> -->
+	<constant name="struts.custom.i18n.resources" value="message" />
+	<constant name="struts.i18n.encoding" value="UTF-8" />
+	<package name="default" namespace="/" extends="struts-default">
+		<!-- <global-results> <result name="error" type="redirect">/page/common/error.jsp</result> 
+			</global-results> <global-exception-mappings> <exception-mapping result="error" 
+			exception="java.lang.Exception"></exception-mapping> </global-exception-mappings> -->
+		<action name="user_*" class="userAction" method="{1}">
+			<result name="success" type="redirectAction">role_loadCurrUserAuthority
+			</result>
+			<result name="error">/index.jsp</result>
+			<result name="logout" type="redirect">/index.jsp</result>
+		</action>
+		<action name="role_*" class="roleAction" method="{1}">
+			<result name="success" type="redirect">/page/common/main.jsp</result>
+			<result name="list">/page/sysmg/role/rolelist.jsp</result>
+			<result name="add">/page/sysmg/role/roleadd.jsp</result>
+			<result name="roleListAction" type="chain">role_list</result>
+			<result name="toUpdatePage">/page/sysmg/role/roleupdate.jsp</result>
+			<result name="update">/page/sysmg/role/roleupdate.jsp</result>
+			<result name="roleauthority">/page/sysmg/role/roleauthority.jsp</result>
+			<result name="toassignemp">/page/sysmg/role/roleassignemp.jsp</result>
+		</action>
+		<action name="leftMenu_*" class="leftMenuAction" method="{1}">
+			<result name="error">/page/common/error.jsp</result>
+			<result name="success">/page/common/leftMenu.jsp</result>
+			<result name="left">/page/common/left.jsp</result>
+		</action>
+		<!-- 部门岗位功能 -->
+		<action name="org_*" class="orgAction" method="{1}">
+			<result name="list">/page/hr/org/orglist.jsp</result>
+			<result name="listByDtree">/page/hr/org/orgDtree.jsp</result>
+			<result name="listByZtree">/page/hr/org/orgZtree.jsp</result>
+			<result name="transfer" type="chain">org_listByZtree</result>
+			<result name="listAction" type="chain">org_list</result>
+			<result name="toAdd">/page/hr/org/orginput.jsp</result>
+			<result name="toUpdate">/page/hr/org/orgupdate.jsp</result>
+			<result name="listByDtreeShowEmp">/page/hr/org/orgDtreeShowEmp.jsp</result>
+			<result name="listByDtreeShowPara">/page/hr/zhangtao/orgDtreeShowPara.jsp</result>
+			<result name="listByZtreeForChoose">/page/hr/org/orgZtreeForChoose.jsp</result>
+		</action>
+		<action name="post_*" class="postAction" method="{1}">
+			<result name="listAction" type="chain">post_list</result>
+			<result name="tomain">/page/hr/org/postmain.jsp</result>
+			<result name="list">/page/hr/org/postlist.jsp</result>
+			<result name="toAdd">/page/hr/org/postadd.jsp</result>
+			<result name="toUpdate">/page/hr/org/postupdate.jsp</result>
+
+		</action>
+		
+		<!-- 社保管理start -->
+		<action name="contribRate_*" class="contribRateAction" method="{1}">
+			<result name="listAction" type="chain">contribRate_list</result>
+			<result name="tomain">/page/hr/shebao/contribRatemain.jsp</result>
+			<result name="list">/page/hr/shebao/contribRatelist.jsp</result>
+			<result name="toAdd">/page/hr/shebao/contribRateadd.jsp</result>			
+			<result name="toUpdate">/page/hr/shebao/contribRateupdate.jsp</result>
+		</action>
+		
+		<action name="ssInfo_*" class="ssInfoAction" method="{1}">
+			<result name="listAction" type="chain">ssInfo_list</result>
+			<result name="tomain">/page/hr/shebao/ssInfomain.jsp</result>
+			<result name="list">/page/hr/shebao/ssInfolist.jsp</result>
+			<result name="toAdd">/page/hr/shebao/ssInfoadd.jsp</result>
+			<result name="toAdd01">/page/hr/shebao/ssInfoadd01.jsp</result>
+			<result name="toUpdate">/page/hr/shebao/ssInfoupdate.jsp</result>
+		</action>
+		<action name="socSecBase_*" class="socSecBaseAction" method="{1}">
+			<result name="listAction" type="chain">socSecBase_list</result>
+			<result name="tomain">/page/hr/shebao/socSecBasemain.jsp</result>
+			<result name="list">/page/hr/shebao/socSecBaselist.jsp</result>
+			<result name="toAdd">/page/hr/shebao/socSecBaseadd.jsp</result>
+			<result name="toAdd01">/page/hr/shebao/socSecBaseadd01.jsp</result>
+			<result name="toUpdate">/page/hr/shebao/socSecBaseupdate.jsp</result>
+		</action>
+		<!-- 社保管理end -->
+		 <!-- 考勤管理 -->
+         <action name="kaoqin_*" class="kaoqinAction" method="{1}">
+        	<result name="listAction" type="chain">kaoqin_list</result>
+        	<result name="tomain">/page/hr/kaoqin/kaoqinmain.jsp</result>
+        	<result name="list">/page/hr/kaoqin/kaoqinlist.jsp</result>
+        	<result name="toAdd">/page/hr/kaoqin/kaoqinadd.jsp</result>
+        	<result name="toUpdate">/page/hr/kaoqin/kaoqinupdate.jsp</result>
+        </action>
+         <action name="kaoqinmonth_*" class="kaoqinmonthAction" method="{1}">
+        	<result name="listAction" type="chain">kaoqinmonth_list</result>
+        	<result name="tomain">/page/hr/kaoqin2/kaoqinmain_month.jsp</result>
+        	<result name="list">/page/hr/kaoqin2/kaoqinlist_month.jsp</result>
+        	<result name="tochaxun">/page/hr/kaoqin2/kaoqinchaxun_month.jsp</result>
+        	<result name="toUpdate">/page/hr/kaoqin2/kaoqinupdate.jsp</result>
+        </action>
+         <action name="kaoqinyear_*" class="kaoqinyearAction" method="{1}">
+        	<result name="listAction" type="chain">kaoqinyear_list</result>
+        	<result name="tomain">/page/hr/kaoqin2/kaoqinmain_year.jsp</result>
+        	<result name="list">/page/hr/kaoqin2/kaoqinlist_year.jsp</result>
+        	<result name="tochaxun">/page/hr/kaoqin2/kaoqinchaxun_year.jsp</result>
+        	<result name="toUpdate">/page/hr/kaoqin2/kaoqinupdate.jsp</result>
+        </action>
+        <!-- end -->
+		
+		
+		<!-- ********************** 薪资管理 start*********************** -->
+		<!-- 帐套管理start -->
+		<action name="zhangtao_*" class="zhangtaoAction" method="{1}">
+			<result name="listAction" type="chain">zhangtao_list</result>
+			<result name="tomain">/page/hr/zhangtao/zhangtaomain.jsp</result>
+			<result name="list">/page/hr/zhangtao/zhangtaolist.jsp</result>
+			<result name="toAdd">/page/hr/zhangtao/zhangtaoadd.jsp</result>
+			<result name="toUpdate">/page/hr/zhangtao/zhangtaoupdate.jsp</result>
+		</action>
+		<!-- 帐套管理end -->
+		
+		<!-- 工资项管理start -->
+		<action name="wageItem_*" class="wageItemAction" method="{1}">
+			<result name="list">/page/hr/wageitem/wageitemlist.jsp</result>
+			<result name="listAction" type="chain">wageItem_list</result>
+			<result name="toAdd">/page/hr/wageitem/wageitemadd.jsp</result>
+			<result name="toEdit">/page/hr/wageitem/wageitemedit.jsp</result>
+			<result name="toUpdate">/page/hr/wageitem/wageitemupdate.jsp</result>
+		</action>
+		<!-- 工资项管理end -->
+		
+		
+		<!-- 员工工资管理start -->
+		
+		<action name="empWage_*" class="empWageAction" method="{1}">
+			<result name="tomain">/page/hr/empwage/empwagemain.jsp</result>
+			<result name="list">/page/hr/empwage/empwagelist.jsp</result>
+			<result name="listAction" type="chain">empWage_list</result>
+			<result name="toAdd">/page/hr/empwage/empwageadd.jsp</result>
+			<result name="calcwage">/page/hr/empwage/calcwage.jsp</result>
+			<result name="toImport">/page/hr/empwage/import.jsp</result>
+			<result name="importExcel" type="chain">empWage_list</result>
+			
+		</action>
+		<!-- 员工工资管理end -->
+		
+		
+		<!-- 员工月度工资start -->
+		
+		<action name="allEmpWage_*" class="allEmpWageAction" method="{1}">
+			<result name="list">/page/hr/allempwage/allempwagelist.jsp</result>
+			<result name="toShow">/page/hr/allempwage/show.jsp</result>
+		</action>
+		
+		<!-- 员工月度工资end -->
+		
+		
+		<!-- 导入excel  start -->
+		
+		<action name="excelImport" class="excelImportAction" method="excelImport">
+			<result name="excelImport">/index.jsp</result>
+		</action>
+		<!-- 导入excel  end -->
+		<!-- **********************薪资管理 end*************************** -->
+
+		<action name="account_*" class="accountAction" method="{1}">
+			<result name="listAction" type="chain">account_list</result>
+			<result name="tomain">/page/sysmg/account/accountmain.jsp</result>
+			<result name="list">/page/sysmg/account/accountlist.jsp</result>
+			
+			<result name="toAdd">/page/sysmg/account/accountadd.jsp</result>
+			<result name="toUpdate">/page/sysmg/account/accountupdate.jsp</result>
+		</action>
+		<action name="approve_*" class="approveAction" method="{1}">
+			<result name="list">/page/sysmg/approve/approvelist.jsp</result>
+			<result name="empList">/page/sysmg/approve/emplist.jsp</result>
+			<result name="toAdd">/page/sysmg/approve/approveadd.jsp</result>
+			<result name="toDetail">/page/sysmg/approve/approvedetail.jsp</result>
+			<result name="toUpdate">/page/sysmg/approve/approveupdate.jsp</result>
+			<result name="toList" type="chain">approve_list</result>
+			<result name="tobacklog">/page/sysmg/approve/backlogapprovelist.jsp
+			</result>
+			<result name="tobacklogAction" type="chain">approve_backlogApprove
+			</result>
+			<result name="toApprove">/page/sysmg/approve/executeapprove.jsp</result>
+			<result name="toreview">/page/sysmg/approve/reviewapprovelist.jsp
+			</result>
+			<result name="toreviewAction" type="chain">approve_reviewApprove
+			</result>
+			<result name="toexecutereview">/page/sysmg/approve/executereview.jsp</result>
+			<result name="tocompleted">/page/sysmg/approve/completedapprovelist.jsp
+			</result>
+			<result name="tocompletedAction" type="chain">approve_completedApproveDetail
+			</result>
+			<result name="tocompletedApproveDetail">/page/sysmg/approve/tocompletedapprovedetail.jsp
+			</result>
+		</action>
+		<action name="dic_*" class="dicAction" method="{1}">
+			<result name="list">/page/sysmg/dic/diclist.jsp</result>
+			<result name="dicDataList">/page/sysmg/dic/dicdatalist.jsp</result>
+			<result name="toList" type="chain">dic_list</result>
+			<result name="toDataList" type="chain">dic_toDataList</result>
+			<result name="toDataAdd">/page/sysmg/dic/dicdataadd.jsp</result>
+			<result name="toDataAddAction" type="chain">dic_toDataAdd</result>
+			<result name="toDicDataUpdate">/page/sysmg/dic/dicdataupdate.jsp</result>
+			<result name="toUpdateDicType">/page/sysmg/dic/dicupdate.jsp</result>
+		</action>
+		<action name="employ_*" class="employAction" method="{1}">
+			<result name="yingpin">/page/hr/employ/yingpin/yingpinmain.jsp</result>
+			<result name="yingpinlist">/page/hr/employ/yingpin/yingpinlist.jsp</result>
+			<result name="toAddYingPin">/page/hr/employ/yingpin/yingpinadd.jsp</result>
+			<result name="toAddYingPinAction" type="chain">employ_toAddYingPin</result>
+			<result name="yingpinlistAction" type="chain">employ_yingpinlist</result>
+			<result name="toYingPinDetail">/page/hr/employ/yingpin/yingpindetail.jsp</result>
+			<result name="toUpdate">/page/hr/employ/yingpin/yingpinupdate.jsp</result>
+			<result name="luyong">/page/hr/employ/luyong/luyongmain.jsp</result>
+			<result name="luyonglist">/page/hr/employ/luyong/luyonglist.jsp</result>
+			<result name="luyonglistAction" type="chain">employ_luyonglist</result>
+			<result name="toUpdateLuYong">/page/hr/employ/luyong/luyongupdate.jsp</result>
+			<result name="toLuYongDetail">/page/hr/employ/luyong/luyongdetail.jsp</result>
+			<result name="ruzhi">/page/hr/employ/ruzhi/ruzhimain.jsp</result>
+			<result name="ruzhilist">/page/hr/employ/ruzhi/ruzhilist.jsp</result>
+			<result name="ruzhilistAction" type="chain">employ_ruzhilist</result>
+			<result name="toFlow">/page/hr/employ/ruzhi/ruzhitoflow.jsp</result>
+			<result name="toFlowAction" type="chain">employ_doFlow</result>
+			<result name="showDetail">/page/hr/employ/ruzhi/ruzhitoapprovecontent.jsp
+			</result>
+			<result name="toFlowDetail">/page/hr/employ/ruzhi/ruzhitoflowdetail.jsp</result>
+		</action>
+
+
+
+		<!-- 员工管理start -->
+		<action name="employee_*" class="employeeAction" method="{1}">
+			<result name="qingjia">/page/hr/employee/qingjiamain.jsp</result>
+			<result name="qingjialist">/page/hr/employee/qingjialist.jsp</result>
+			<result name="toFlow">/page/hr/employee/qingjiatoflow.jsp</result>
+		   <!-- 人员信息管理 -->
+		    <result name="tomain">/page/hr/employee/employeemain.jsp</result>      
+        	<result name="list">/page/hr/employee/employeelist.jsp</result>
+        	<result name="listAction" type="chain">employee_list</result>
+        	<result name="toAdd">/page/hr/employee/employeeadd.jsp</result>
+        	<result name="toUpdate">/page/hr/employee/employeeupdate.jsp</result>
+            <result name="toxiangqing">/page/hr/employee/empXiangQing.jsp</result>
+            <result name="todiaodong">/page/hr/employee/empDiaoDong.jsp</result>                  
+            <result name="tofamily">/page/hr/employee/infoMemberadd.jsp</result>
+            <result name="tohealthy">/page/hr/employee/infoHealthyadd.jsp</result>
+            <result name="tojiang">/page/hr/employee/infoJiangchengadd.jsp</result>
+		    <result name="addxiangqing" type="chain">employee_toXiangQing</result>
+
+		</action>
+		<!-- 员工管理end -->
+		<!-- 用功管理start -->
+		<action name="yonggong_*" class="yonggongAction" method="{1}">
+		    <result name="shenqingmain">/page/hr/yonggong/borrowshenqinmain.jsp</result>
+		    <result name="list">/page/hr/yonggong/employeelist.jsp</result>
+		    <result name="toneiborrow">/page/hr/yonggong/neiBorrow.jsp</result>
+		    <result name="toborrowout">/page/hr/yonggong/borrowOut.jsp</result>
+		    <result name="toborrowin">/page/hr/yonggong/borrowIn.jsp</result>
+		 	
+		 	<result name="listAction" type="chain">yonggong_list</result>
+		    <result name="chaxun">/page/hr/yonggong/borrowChaXun.jsp</result>
+		    <result name="borrowlist" type="chain">yonggong_chaXun</result>
+
+		</action>
+		<!-- 用功管理end -->
+<!--招聘计划书    start  -->
+<action name="employPlan_*" class="employPlanAction" method="{1}">
+            <result name="employPlanList">/page/hr/employ/employPlan/planlist.jsp</result>
+            <result name="employPlan">/page/hr/employ/employPlan/planmain.jsp</result>
+            <result name="toAddPlan">/page/hr/employ/employPlan/planadd.jsp</result>
+            <result name="updatePlan">/page/hr/employ/employPlan/planUpdate.jsp</result>
+            <result name="toAddPlanAction" type="chain">employPlan_employPlanList</result>
+            <result name="toPage">/page/hr/employ/employPlan/import.jsp</result>
+              <result name="planlistAction" type="chain">employPlan_employPlanList</result>
+              <result name="planMang">/page/hr/employ/planMang/planMangMain.jsp</result>
+              <result name="planMangList">/page/hr/employ/planMang/planMangList.jsp</result>
+              <result name="toFlow">/page/hr/employ/planMang/planToFlow.jsp</result>
+              <result name="infoPlan">/page/hr/employ/planMang/plandetail.jsp</result>
+              <result name="planManglistAction" type="chain">employPlan_planMangList</result>
+              <result name="toFlowAction" type="chain">employPlan_doFlow</result>
+               <result name="toFlowDetail">/page/hr/employ/planMang/plantoflowdetail.jsp</result>
+                <result name="showDetail">/page/hr/employ/planMang/plantoapprovecontent.jsp</result>
+        </action>
+        <!--  招聘计划书 end-->
+        <!-- 培训 start -->
+		<action name="train_*" class="trainAction" method="{1}">
+			<result name="tomain">/page/hr/train/trainmain.jsp</result>
+	        <result name="applyManage">/page/hr/train/trainmain.jsp</result>
+	        <result name="trainList" type="chain">train_trainList</result>
+	        <result name="list">/page/hr/train/trainlist.jsp</result>
+	        <result name="doAddTrain">/page/hr/train/trainadd.jsp</result>
+	        <result name="toUpdateTrain">/page/hr/train/trainupdate.jsp</result>
+	        <result name="toDetailTrain">/page/hr/train/traindetail.jsp</result>
+			<result name="toFlow">/page/hr/train/traintoflow.jsp</result>
+			<result name="toFlowDetail">/page/hr/train/traintoflowdetail.jsp</result>
+			<result name="showDetail">/page/hr/train/trainPlainDetail.jsp</result>
+        </action>
+        <action name="trainPlain_*" class="trainPlainAction" method="{1}">
+          <result name="approveManage">/page/hr/train/plain/plainmain.jsp</result>
+          <result name="trainPlainList" type="chain">trainPlain_trainPlainList</result>
+          <result name="plainList">/page/hr/train/plain/plainlist.jsp</result>
+		  <result name="toassignemp">/page/hr/train/plain/trainemp/empassignemp.jsp</result>
+		  <result name="toDetail">/page/hr/train/plain/plainDetail.jsp</result>
+          <!-- <result name="toEmpManage"></result>
+           <result name="doEmpManage"></result> -->
+        </action>
+        <action name="effectAction_*" class="effectAction" method="{1}">
+          <result name="effectListAction" type="chain">effectAction_effectList</result>
+          <result name="effectlist">/page/hr/train/effect/effectlist.jsp</result>
+          <result name="toEvaluate">/page/hr/train/effect/evaluate.jsp</result>
+          <result name="toViewEval">/page/hr/train/effect/viewEval.jsp</result>
+          <result name="toInputEmpScore">/page/hr/train/effect/empScore.jsp</result>
+          <result name="toIndividualEnval">/page/hr/train/effect/individualEnval.jsp</result>
+          <result name="toIndividualEnvalAction" type="chain">effectAction_toIndividualEnval</result>
+          <result name="inDivEnvalPage">/page/hr/train/effect/individualEnvalPage.jsp</result> 
+          <result name="toresultpage">/page/hr/train/effect/resultpage.jsp</result>          
+        </action>
+        <!-- 培训 end -->
+	</package>
+
+	<package name="ajax" namespace="/ajax" extends="json-default">
+		<action name="empAjax_*" class="empAjaxAction" method="{1}">
+			<result name="success" type="json">
+				<param name="root">emps</param>
+			</result>
+		</action>
+	</package>
+</struts>

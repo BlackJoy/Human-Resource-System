@@ -1,0 +1,27 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<!DOCTYPE hibernate-mapping PUBLIC
+          "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+          "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+          
+<hibernate-mapping package="com.sys.hr.employee">
+	<class name="Employee" table="TBL_Employee">
+		<id name="id" column="id">
+			<generator class="uuid" />
+		</id>
+		
+		<property name="employeeCode" column="employeeCode" />
+		<property name="employeeName" column="employeeName" />
+		<property name="orgid" column="orgid" />
+		<property name="gender" column="gender" />
+		<property name="identityCard" column="identityCard" />
+		<property name="education" column="education" />
+		<property name="specialty" column="specialty" />
+		<property name="graduateSchool" column="graduateSchool" />
+		<property name="address" column="address" />
+		<property name="phone" column="phone" />
+		<property name="shiyongTime" column="SHIYONGTIME" />
+		<property name="ruzhiTime" column="RUZHITIME" />
+		<property name="employeeStatus" column="EMPLOYEESTATUS" />
+		<property name="employID" column="EMPLOYID" />
+	</class>
+</hibernate-mapping>

@@ -1,0 +1,24 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<!DOCTYPE hibernate-mapping PUBLIC
+          "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+          "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+          
+<hibernate-mapping package="com.sys.hr.employplan">
+	<class name="EmployPlan" table="TBL_EMPLOYPLAN">
+		<id name="id" column="ID">
+			<generator class="uuid" />
+		</id>
+		<property name="org" column="ORG" />
+		<property name="position" column="POSITION" />
+		<property name="num" column="NUM" />
+		<property name="major" column="MAJOR" />
+		<property name="sex" column="SEX" />
+		<property name="englishDegree" column="ENGLISHDEGREE" />
+		<property name="isTrain" column="ISTRAIN" />
+		<property name="positonAsk" column="POSITIONASK" />
+		<property name="wwT" column="WTIME" />
+		<property name="forSalary" column="FORSALARY" />
+		<property name="status" column="STATUS" />
+		<property name="name" column="PLANNAME"/>
+	</class>
+</hibernate-mapping>

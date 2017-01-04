@@ -1,0 +1,17 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<!DOCTYPE hibernate-mapping PUBLIC
+          "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+          "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+          
+<hibernate-mapping package="com.sys.hr.train">
+	<class name="TrainAuth" table="TBL_Train_Value">
+		<id name="id" column="id">
+			<generator class="uuid" />
+		</id>
+		<property name="orgId" column="orgId" />
+		<property name="trainId" column="trainId" />
+		<property name="trainName" column="trainName" />
+		<property name="whichIdea" column="whichIdea" />
+		<property name="status" column="status" />
+	</class>
+</hibernate-mapping>

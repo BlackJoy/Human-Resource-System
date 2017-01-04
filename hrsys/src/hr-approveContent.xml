@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<approveContent>
+	<contentPage id="1" name="员工调动详情页" desc="员工调动详情页面" action="labor_detail.action"></contentPage>
+	<contentPage id="2" name="干部聘免详情页" desc="干部聘免详情页面" action="cadre_detail.action"></contentPage>
+	<contentPage id="3" name="入职详情页" desc="入职详情页面" action="employ_showDetail.action"></contentPage>
+	<contentPage id="4" name="请假详情页" desc="请假详情页面" action="employ_showDetail.action"></contentPage>
+	<contentPage id="5" name="招聘计划书详情页" desc="招聘计划书详情页" action="employPlan_showDetail.action"></contentPage>
+	<contentPage id="10" name="培训审批详情详情页" desc="培训审批详情详情页" action="train_showDetail.action"></contentPage>
+</approveContent>

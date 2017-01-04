@@ -1,0 +1,22 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<!DOCTYPE hibernate-mapping PUBLIC
+          "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+          "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+          
+<hibernate-mapping package="com.sys.approve">
+	<class name="ApproveFlowExec" table="TBL_APPROVE_FLOW_EXEC">
+		<id name="id" column="id">
+			<generator class="uuid" />
+		</id>
+		
+		<property name="approveExecId" column="APPROVEEXECID" />
+		<property name="approveFlowId" column="APPROVEFLOWID" />
+		<property name="orderId" column="ORDERID" />
+		<property name="approverId" column="APPROVERID" />
+		<property name="approverName" column="APPROVERNAME" />
+		<property name="approveType" column="APPROVETYPE" />
+		<property name="status" column="STATUS" />
+		<property name="approveTime" column="APPROVETIME" />
+		<property name="approveComment" column="APPROVECOMMENT" />
+	</class>
+</hibernate-mapping>

@@ -1,0 +1,88 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<!DOCTYPE hibernate-configuration PUBLIC
+          "-//Hibernate/Hibernate Configuration DTD 3.0//EN"
+          "http://hibernate.sourceforge.net/hibernate-configuration-3.0.dtd">
+             
+<hibernate-configuration>
+<session-factory>
+	<property name="connection.driver_class">
+		oracle.jdbc.driver.OracleDriver
+	</property>
+	<property name="connection.url">
+		jdbc:oracle:thin:@localhost:1521:orcl
+	</property>
+	<property name="connection.username">hrsys</property>
+	<property name="connection.password">hrsys</property>
+
+	<property name="dialect">
+		org.hibernate.dialect.Oracle10gDialect
+	</property>
+	<property name="show_sql">true</property>
+	<property name="format_sql">true</property>
+
+	<property name="current_session_context_class">thread</property>
+
+	<!-- mapping files -->
+	<mapping resource="com/sys/authority/Authority.hbm.xml" />
+	<mapping resource="com/sys/role/RoleAuthority.hbm.xml" />
+	<mapping resource="com/sys/login/User.hbm.xml" />
+	<mapping resource="com/sys/role/RoleEmployee.hbm.xml" />
+	<mapping resource="com/sys/role/Role.hbm.xml" />
+	<mapping resource="com/sys/hr/employee/Employee.hbm.xml" />
+	<mapping resource="com/sys/hr/org/Org.hbm.xml" />
+	<mapping resource="com/sys/hr/org/Post.hbm.xml" />
+	<mapping resource="com/sys/approve/Approve.hbm.xml" />
+	<mapping resource="com/sys/approve/ApproveFlow.hbm.xml" />
+	<mapping resource="com/sys/dict/DicData.hbm.xml" />
+	<mapping resource="com/sys/dict/DicType.hbm.xml" />
+	<mapping resource="com/sys/hr/emp2position/Emp2Position.hbm.xml" />
+	<mapping resource="com/sys/hr/employ/Employ.hbm.xml" />
+	<mapping resource="com/sys/approve/ApproveExec.hbm.xml" />
+	<mapping resource="com/sys/approve/ApproveFlowExec.hbm.xml" />
+	
+	
+	<!-- 新增start -->
+	
+	<mapping resource="com/sys/hr/zhangtao/ZhangTao.hbm.xml" />
+	<mapping resource="com/sys/hr/wageitem/WageItem.hbm.xml" />
+	<mapping resource="com/sys/hr/wageitem/WageTypeRelation.hbm.xml" />
+	<mapping resource="com/sys/hr/empwage/CmpnWageInfo.hbm.xml" />
+	<mapping resource="com/sys/hr/empwage/CmpnMonthAll.hbm.xml" />
+	<!-- 新增 end-->
+	
+	<!-- 考勤 -->
+	<mapping resource="com/sys/hr/kaoqin/Kaoqin.hbm.xml" />
+	<mapping resource="com/sys/hr/kaoqin2/Kaoqinmonth.hbm.xml" />
+	<mapping resource="com/sys/hr/kaoqin2/Kaoqinyear.hbm.xml" />
+	<!-- 考勤end -->
+	<!-- 招聘计划书 -->
+	<mapping resource="com/sys/hr/employplan/EmployPlan.hbm.xml" />
+	<!-- 招聘计划书结束 -->
+		<!-- 员工详情 -->
+	<mapping resource="com/sys/hr/employee/TblInfoFamily1.hbm.xml" />
+	<mapping resource="com/sys/hr/employee/TblInfoHealthy.hbm.xml" />
+	<mapping resource="com/sys/hr/employee/TblInfoJiangcheng.hbm.xml" />
+	<!-- 员工详情 -->
+	<!-- 调动 -->
+	<mapping resource="com/sys/hr/employee/TblDiaodong.hbm.xml" />
+	<!-- 调动 -->
+	<!-- 用功管理start -->
+	<mapping resource="com/sys/hr/yonggong/TblNeiborrow.hbm.xml" />
+	<mapping resource="com/sys/hr/yonggong/TblBorrowout.hbm.xml" />
+	<mapping resource="com/sys/hr/yonggong/TblBorrowin.hbm.xml" />
+	<!-- 用功管理end -->
+	<!--社保start -->
+	<mapping resource="com/sys/hr/socialSecurity/Contribution_Rate.hbm.xml" />
+	<mapping resource="com/sys/hr/socialSecurity/baoXianItem.hbm.xml" />
+	<mapping resource="com/sys/hr/socialSecurity/SocSecrityInfo.hbm.xml" />
+	<mapping resource="com/sys/hr/socialSecurity/SocSecBase.hbm.xml" />
+	<!--社保start -->
+	<!-- 培训 start -->	 
+	<mapping resource="com/sys/hr/train/Train.hbm.xml" />
+	<mapping resource="com/sys/hr/train/TrainPlain.hbm.xml" />
+	<mapping resource="com/sys/hr/train/TrainAuth.hbm.xml" /> 
+	<mapping resource="com/sys/hr/train/TrainScore.hbm.xml" />
+	<!-- 培训 end -->		
+</session-factory>
+
+</hibernate-configuration>

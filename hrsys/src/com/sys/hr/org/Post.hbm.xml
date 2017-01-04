@@ -1,0 +1,19 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<!DOCTYPE hibernate-mapping PUBLIC
+          "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+          "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+          
+<hibernate-mapping package="com.sys.hr.org">
+	<class name="Post" table="TBL_POST">
+		<id name="id" column="id">
+			<generator class="uuid" />
+		</id>
+		<property name="postCod" column="POST_CODE" />
+		<property name="postName" column="POST_NAME" />
+		<property name="postType" column="POST_TYPE" />
+		<property name="postDuty" column="POST_DUTY" />
+		<property name="iskey" column="ISKEY" />
+		<property name="orgid" column="ORGID" />
+		
+	</class>
+</hibernate-mapping>

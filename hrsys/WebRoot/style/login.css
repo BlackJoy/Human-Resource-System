@@ -1,0 +1,13 @@
+body,div{margin:0px; padding:0px;}
+body{background:#2a70a3;}
+div.container{background:url(../images/login_bg.jpg) repeat-x; width:100%;}
+div.l_center{width:1000px; margin-left:auto; margin-right:auto;}
+div.login_row2{background:url(../images/login_02.jpg) no-repeat; width:1000px; height:212px;}
+div.login_row3{background:url(../images/login_03.jpg) no-repeat; width:539px; height:191px; padding-left:461px; padding-top:77px;}
+
+div.login_row4{background:url(../images/login_04.jpg) no-repeat; width:1000px; height:170px;}
+
+input.l_subbtn{background:url(../images/btnlogin.jpg); width:71px; height:23px; border:0px; margin-right:26px; padding:0px; margin-top:22px;}
+input.l_resetbtn{background:url(../images/btnreset.jpg); width:71px; height:23px; border:0px; padding:0px; margin-top:20px;}
+input.l_name{width:170px; height:19px; border:0px; background:none; margin-left:8px; display:block;}
+input.l_pass{width:170px; height:19px; border:0px; background:none; margin-left:8px; display:block; margin-top:25px;}

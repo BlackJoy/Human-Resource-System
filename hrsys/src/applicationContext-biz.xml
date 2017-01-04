@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:aop="http://www.springframework.org/schema/aop"
+	xmlns:tx="http://www.springframework.org/schema/tx"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-2.0.xsd 
+	http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx-2.0.xsd 
+	http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop-2.0.xsd">
+
+	<bean id="authorityBiz" class="com.sys.authority.biz.impl.AuthorityBIZImpl">
+		<property name="authorityDao" ref="authorityDao" />
+	</bean>
+	
+	<bean id="roleAuthorityBiz" class="com.sys.role.biz.impl.RoleAuthorityBIZImpl">
+		<property name="roleAuthorityDao" ref="roleAuthorityDao" />
+	</bean>
+	
+	<bean id="userBiz" class="com.sys.login.biz.impl.UserBIZImpl">
+		<property name="userDao" ref="userDao" />
+	</bean>
+	
+	<bean id="reBiz" class="com.sys.role.biz.impl.RoleEmployeeBIZImpl">
+		<property name="reDao" ref="reDao" />
+	</bean>
+	
+	<bean id="roleBiz" class="com.sys.role.biz.impl.RoleBIZImpl">
+		<property name="roleDao" ref="roleDao" />
+	</bean>
+	
+	<bean id="empBiz" class="com.sys.hr.employee.biz.impl.EmployeeBIZImpl">
+		<property name="empDao" ref="empDao" />
+	</bean>
+	
+	<bean id="orgBiz" class="com.sys.hr.org.biz.impl.OrgBIZImpl">
+		<property name="orgDao" ref="orgDao" />
+	</bean>
+	
+	<bean id="commonBiz" class="com.sys.common.biz.BaseBIZImpl">
+		<property name="commonDao" ref="commonDao" />
+	</bean>
+	<bean id="accountBiz" class="com.sys.account.biz.impl.AccountBIZImpl">
+		<property name="accountDao" ref="accountDao" />
+		<property name="reDao" ref="reDao" />
+	</bean>
+	
+	<bean id="approveBiz" class="com.sys.approve.biz.impl.ApproveBIZImpl">
+		<property name="approveDao" ref="approveDao" />
+	</bean>
+	
+	<bean id="dicBiz" class="com.sys.dict.biz.impl.DicBizImpl">
+		<property name="dicDao" ref="dicDao" />
+	</bean>
+	
+	<bean id="employBiz" class="com.sys.hr.employ.biz.impl.EmployBIZImpl">
+		<property name="employDao" ref="employDao" />
+	</bean>
+	<!-- 招聘计划书 start -->
+	
+	<bean id="planBiz" class="com.sys.hr.employplan.biz.impl.EmployPlanBIZImpl">
+		<property name="planDao" ref="planDao" />
+		<property name="commonDao" ref="commonDao" />
+	</bean>
+	
+		<!--招聘计划书  end   -->
+</beans>

@@ -1,0 +1,54 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<!DOCTYPE hibernate-mapping PUBLIC
+          "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+          "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+          
+<hibernate-mapping >
+		<class name="com.sys.hr.train.TrainScore" table="TBL_TRAIN_SCORE">
+        <id name="id" type="java.lang.String">
+            <column name="ID" length="32" />
+            <generator class="uuid" />
+        </id>
+        <property name="employeecode" type="java.lang.String">
+            <column name="EMPLOYEECODE" length="50">
+                <comment>学员编号</comment>
+            </column>
+        </property>
+        <property name="employeename" type="java.lang.String">
+            <column name="EMPLOYEENAME" length="50">
+                <comment>学员姓名</comment>
+            </column>
+        </property>
+        <property name="traincode" type="java.lang.String">
+            <column name="TRAINCODE" length="50">
+                <comment>培训项目编号</comment>
+            </column>
+        </property>
+        <property name="trainsubject" type="java.lang.String">
+            <column name="TRAINSUBJECT" length="100">
+                <comment>培训项目名称</comment>
+            </column>
+        </property>
+        <property name="empscore" type="java.lang.Double">
+            <column name="EMPSCORE" sql-type="DOUBLE" precision="22" scale="0">
+                <comment>学员成绩</comment>
+            </column>
+        </property>
+        <property name="evaluate" type="java.lang.String">
+            <column name="EVALUATE" length="2000">
+                <comment>评价</comment>
+            </column>
+        </property>
+        <property name="employeeid" type="java.lang.String">
+            <column name="EMPLOYEEID" length="50">
+                <comment>员工Id</comment>
+            </column>
+        </property>
+        <property name="trainid" type="java.lang.String">
+            <column name="TRAINID" length="50" />
+        </property>
+        <property name="status" type="java.lang.String">
+            <column name="STATUS" length="2" />
+        </property>
+    </class>
+</hibernate-mapping>

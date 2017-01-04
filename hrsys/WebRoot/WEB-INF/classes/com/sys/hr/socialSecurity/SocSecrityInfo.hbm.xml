@@ -1,0 +1,21 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<!DOCTYPE hibernate-mapping PUBLIC
+          "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+          "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+          
+<hibernate-mapping package="com.sys.hr.socialSecurity">
+	<class name="SocSecrityInfo" table="SOC_SECRITY_INFO">
+		<id name="id" column="ID">
+			<generator class="uuid" >           
+        	</generator>
+		</id>
+		
+		<property name="employeeCode" column="EMPLOYEECODE" />
+		<property name="employeeName" column="EMPLOYEENAME" />
+		<property name="orgid" column="ORGID" />
+		<property name="ssId" column="SSID" />
+		<property name="foundId" column="FOUNDID" />
+		<property name="remark" column="REMARK" />
+		
+	</class>
+</hibernate-mapping>
